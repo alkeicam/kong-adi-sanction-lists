@@ -2,7 +2,7 @@ rockspec_format = "3.0"
 
 local plugin_name = "adi-sanction-lists"
 local package_name = "kong-" .. plugin_name
-local package_version = "1.0.10"
+local package_version = "1.0.11"
 local rockspec_revision = "1"
 local execon_page = "https://www.execon.pl/abee-digital-id"
 
