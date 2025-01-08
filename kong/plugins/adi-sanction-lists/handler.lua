@@ -3,7 +3,7 @@ local cjson = require "cjson"
 
 local ADISanctionLists = {
     PRIORITY = 1000, -- Execution priority
-    VERSION = "1.0.4",
+    VERSION = "1.0.14",
 }
 
 local function call_external_api(request_body, conf)
