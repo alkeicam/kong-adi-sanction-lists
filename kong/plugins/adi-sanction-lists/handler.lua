@@ -49,7 +49,7 @@ local function call_external_api(request_body, conf)
 end
 
 local function call_adi_sl_api(name, doc, conf)
-    kong.log.debug("Going to call REST API: ".. conf.validation_url .. " with ", name, doc)
+    kong.log.debug("Going to call REST API: ".. conf.validation_url .. " with fullName=" .. name .. " doc=" .. doc)
 
     -- Make an HTTP request to the external REST API
     local httpc = http.new()
