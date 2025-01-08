@@ -151,7 +151,7 @@ function ADISanctionLists:access(conf)
 
     if api_response.count and api_response.count > 0 then
         kong.service.request.set_header("X-Adi-Sanctions", cjson.encode(api_response))
-        kong.log.debug("Sanction lists negative, adding X-Adi-Sanctions with " .. cjson.encode(api_response))
+        kong.log.debug("Sanction lists match, adding X-Adi-Sanctions with " .. cjson.encode(api_response))
         -- -- Return the JSON from the REST API response
         -- kong.response.exit(403, api_response)
     end
