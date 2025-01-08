@@ -2,13 +2,13 @@ rockspec_format = "3.0"
 
 local plugin_name = "adi-sanction-lists"
 local package_name = "kong-" .. plugin_name
-local package_version = "1.0.12"
+local package_version = "1.0.13"
 local rockspec_revision = "1"
 local execon_page = "https://github.com/alkeicam/kong-adi-sanction-lists"
 
 local github_account_name = "ExeconOne"
 local github_repo_name = package_name
-local git_checkout = "v1.0.10"
+local git_checkout = "v1.0.13"
 
 
 package = package_name
