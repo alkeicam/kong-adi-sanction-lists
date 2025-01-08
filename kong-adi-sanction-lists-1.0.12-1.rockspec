@@ -2,9 +2,9 @@ rockspec_format = "3.0"
 
 local plugin_name = "adi-sanction-lists"
 local package_name = "kong-" .. plugin_name
-local package_version = "1.0.11"
+local package_version = "1.0.12"
 local rockspec_revision = "1"
-local execon_page = "https://www.execon.pl/abee-digital-id"
+local execon_page = "https://github.com/alkeicam/kong-adi-sanction-lists"
 
 local github_account_name = "ExeconOne"
 local github_repo_name = package_name
@@ -20,7 +20,7 @@ description = {
   summary = "Abee Digital ID Sanction Lists Kong plugin.",
   detailed = [[
     This plugin integrates with Kong to provide functionality for checking
-    Abee Digital ID sanction lists (Fraud, AML) as part of the request processing pipeline.
+    Abee Digital ID sanction lists (Fraud, AML) as part of the request processing pipeline. Learn more https://www.execon.pl/abee-digital-id
   ]],
   homepage = execon_page,
   license = "Apache 2.0",
