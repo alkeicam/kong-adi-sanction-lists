@@ -1,0 +1,17 @@
+{
+    "name": "@archimedes/adi-sanctionlists-kong-plugin",
+    "version": "1.0.10",
+    "description": "Abee Digital Id Customer Sanction Lists Kong Plugin",
+    "scripts": {
+        "pongo-test": "~/.local/bin/pongo --help",
+        "pongo-up": "~/.local/bin/pongo init && ~/.local/bin/pongo up",
+        "pongo-shell": "~/.local/bin/pongo shell",
+        "pongo-check": "docker ps | grep -i \"pongo\"",
+        "publish-patch": "npm version patch && git push origin && git push origin --tags",
+        "publish-local": "sudo luarocks build && luarocks pack && luarocks upload --api-key="
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {}
+}

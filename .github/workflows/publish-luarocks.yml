@@ -1,0 +1,29 @@
+name: Publish To Lua Rocks
+
+on:
+  push:
+    tags:
+      - 'v*'  # This will trigger the action for tags that start with "v", e.g., v1.0.0, v2.1.1, etc.
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest  # You can use other runners like 'macos-latest' if required.
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Checks out the code from the repository.
+
+    - name: Set up Lua
+      uses: actions/setup-lua@v1  # Sets up Lua for the job.
+    
+    - name: Install LuaRocks
+      run: sudo apt-get install luarocks  # Install LuaRocks.
+
+    - name: Install dependencies
+      run: luarocks install --deps-only  # Install dependencies listed in the rockspec file.
+
+    - name: Publish package to LuaRocks
+      env:
+        LUAROCKS_API_KEY: ${{ secrets.LUAROCKS_API_KEY }}  # Use GitHub Secrets for the LuaRocks API key.
+      run: |
+        luarocks publish <your_package>.rockspec  # Replace with your rockspec filename.
