@@ -1,3 +1,5 @@
+rockspec_format = "3.0"
+
 local plugin_name = "adi-sanction-lists"
 local package_name = "kong-" .. plugin_name
 local package_version = "1.0.10"
@@ -6,7 +8,7 @@ local execon_page = "https://www.execon.pl/abee-digital-id"
 
 local github_account_name = "ExeconOne"
 local github_repo_name = package_name
-local git_checkout = package_version
+local git_checkout = "v1.0.10"
 
 
 package = package_name
@@ -26,12 +28,12 @@ description = {
 }
 
 source = {
-  url = "git+https://github.com/"..github_account_name.."/"..github_repo_name..".git",
-  branch = git_checkout,
+  url = "git://github.com/alkeicam/kong-adi-sanction-lists",
+  branch = git_checkout
 }
 
 dependencies = {
-    "kong = 3.7.0",
+    "lua-resty-http",
     "lua-cjson",
 }
 
